@@ -11,7 +11,7 @@
     dest: "/tmp"
     remote_src: yes
     creates: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64/snmp_exporter"
-    run_once: true
+  run_once: true
   delegate_to: localhost
 
 - name: Propagate SNMP Exporter binaries
