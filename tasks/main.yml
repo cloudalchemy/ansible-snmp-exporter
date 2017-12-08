@@ -1,0 +1,46 @@
+---
+- name: Create directory
+  file:
+    dest: /opt/snmp_exporter
+    state: directory
+
+- name: Download snmp exporter binary to local folder
+  become: no
+  unarchive:
+    src: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64.tar.gz"
+    dest: "/tmp"
+    remote_src: yes
+    creates: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64/snmp_exporter"
+    run_once: true
+  delegate_to: localhost
+
+- name: Propagate SNMP Exporter binaries
+  copy:
+    src: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64/snmp_exporter"
+    dest: "/opt/snmp_exporter"
+    mode: 0755
+  notify:
+    - restart snmp exporter
+
+- name: Copy the SNMP Exporter systemd service file
+  template:
+    src: snmp_exporter.service.j2
+    dest: /etc/systemd/system/snmp_exporter.service
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart snmp exporter
+
+- name: Copy configuration file
+  copy:
+    src: "{{ snmp_exporter_config_file }}"
+    dest: /opt/snmp_exporter/snmp.yml
+  notify:
+    - restart snmp exporter
+
+- name: Ensure SNMP Exporter is enabled on boot
+  service:
+    name: snmp_exporter
+    enabled: yes
+    use: service
