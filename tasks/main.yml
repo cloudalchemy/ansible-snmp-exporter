@@ -4,19 +4,22 @@
     dest: /opt/snmp_exporter
     state: directory
 
+- name: Set go architecture
+  set_fact:
+    go_arch: "{{ ansible_architecture | replace('armv7l','armv7') | replace('aarch64','arm64') | replace('x86_64','amd64') }}"
+
 - name: Download snmp exporter binary to local folder
   become: no
   unarchive:
-    src: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64.tar.gz"
+    src: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch }}.tar.gz"
     dest: "/tmp"
     remote_src: yes
-    creates: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64/snmp_exporter"
-  run_once: true
+    creates: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch }}/snmp_exporter"
   delegate_to: localhost
 
 - name: Propagate SNMP Exporter binaries
   copy:
-    src: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64/snmp_exporter"
+    src: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch }}/snmp_exporter"
     dest: "/opt/snmp_exporter"
     mode: 0755
   notify:
