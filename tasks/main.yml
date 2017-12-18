@@ -7,16 +7,15 @@
 - name: Download snmp exporter binary to local folder
   become: no
   unarchive:
-    src: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64.tar.gz"
+    src: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}.tar.gz"
     dest: "/tmp"
     remote_src: yes
-    creates: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64/snmp_exporter"
-  run_once: true
+    creates: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/snmp_exporter"
   delegate_to: localhost
 
 - name: Propagate SNMP Exporter binaries
   copy:
-    src: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-amd64/snmp_exporter"
+    src: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/snmp_exporter"
     dest: "/opt/snmp_exporter"
     mode: 0755
   notify:
