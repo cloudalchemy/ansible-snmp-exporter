@@ -35,6 +35,7 @@
   get_url:
     url: "https://raw.githubusercontent.com/prometheus/snmp_exporter/v{{ snmp_exporter_version }}/snmp.yml"
     dest: /opt/snmp_exporter/snmp.yml
+    validate_certs: no
   notify:
     - restart snmp exporter
   when: snmp_exporter_config_file == ""
