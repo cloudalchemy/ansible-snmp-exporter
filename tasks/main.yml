@@ -35,6 +35,7 @@
   copy:
     src: "{{ snmp_exporter_config_file }}"
     dest: /opt/snmp_exporter/snmp.yml
+  no_log: True
   notify:
     - restart snmp exporter
 
