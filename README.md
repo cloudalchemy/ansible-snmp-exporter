@@ -7,7 +7,7 @@
 [![Ansible Role](https://img.shields.io/badge/ansible%20role-cloudalchemy.snmp_exporter-blue.svg)](https://galaxy.ansible.com/cloudalchemy/snmp-exporter/)
 [![GitHub tag](https://img.shields.io/github/tag/cloudalchemy/ansible-snmp-exporter.svg)](https://github.com/cloudalchemy/ansible-snmp-exporter/tags)
 
-# Description
+## Description
 
 Deploy and manage prometheus [SNMP exporter](https://github.com/prometheus/snmp_exporter) using ansible.
 
