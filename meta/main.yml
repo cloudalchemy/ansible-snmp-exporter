@@ -11,12 +11,17 @@ galaxy_info:
   - name: Debian
     versions:
     - jessie
+    - stretch
   - name: EL
     versions:
     - 7
+  - name: Fedora
+    versions:
+    - 27
   galaxy_tags:
   - monitoring
   - prometheus
-  - snmp-exporter
+  - node-exporter
+  - metrics
 
 dependencies: []
