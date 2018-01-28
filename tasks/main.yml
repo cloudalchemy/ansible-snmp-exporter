@@ -36,17 +36,23 @@
     url: "https://raw.githubusercontent.com/prometheus/snmp_exporter/v{{ snmp_exporter_version }}/snmp.yml"
     dest: /opt/snmp_exporter/snmp.yml
     validate_certs: no
+    owner: root
+    group: root
+    mode: 0644
   notify:
-    - restart snmp exporter
+    - reload snmp exporter
   when: snmp_exporter_config_file == ""
 
 - name: Copy configuration file
-  copy:
+  template:
     src: "{{ snmp_exporter_config_file }}"
     dest: /opt/snmp_exporter/snmp.yml
+    owner: root
+    group: root
+    mode: 0644
   no_log: True
   notify:
-    - restart snmp exporter
+    - reload snmp exporter
   when: snmp_exporter_config_file != ""
 
 - name: Ensure SNMP Exporter is enabled on boot
