@@ -8,9 +8,9 @@ User=nobody
 Group={{ 'nogroup' if ansible_os_family == 'Debian' else 'nobody' }}
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/opt/snmp_exporter/snmp_exporter \
-  --web.listen-address="{{ snmp_exporter_web_listen_address }}" \
-  --log.level="{{ snmp_exporter_log_level }}" \
-  --config.file="/opt/snmp_exporter/snmp.yml"
+  --web.listen-address={{ snmp_exporter_web_listen_address }} \
+  --log.level={{ snmp_exporter_log_level }} \
+  --config.file=/opt/snmp_exporter/snmp.yml
 
 KillMode=process
 
