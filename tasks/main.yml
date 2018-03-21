@@ -50,7 +50,7 @@
     owner: root
     group: root
     mode: 0644
-  no_log: True
+  no_log: "{{ 'true if __testing_on_travis is defined else 'false' }}"
   notify:
     - reload snmp exporter
   when: snmp_exporter_config_file != ""
