@@ -3,7 +3,7 @@ galaxy_info:
   author: Pawel Krupa
   description: Prometheus SNMP Exporter
   license: MIT
-  min_ansible_version: 2.2
+  min_ansible_version: 2.3
   platforms:
   - name: Ubuntu
     versions:
