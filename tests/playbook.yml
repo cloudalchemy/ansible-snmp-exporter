@@ -3,4 +3,5 @@
   roles:
     - ansible-snmp-exporter
   vars:
+    __testing_on_travis: True
     snmp_exporter_web_listen_address: "127.0.0.1:9116"
