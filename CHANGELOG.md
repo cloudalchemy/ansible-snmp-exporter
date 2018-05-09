@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
+
+**Merged pull requests:**
+
+- upgrade to molecule 2.x [\#11](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/11) ([paulfantom](https://github.com/paulfantom))
+
 ## [0.2.5](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-04-05)
 ## [0.2.4](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-03-26)
 **Merged pull requests:**
