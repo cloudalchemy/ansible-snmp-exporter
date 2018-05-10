@@ -1,5 +1,5 @@
 ---
-snmp_exporter_version: 0.9.0
+snmp_exporter_version: 0.10.0
 snmp_exporter_web_listen_address: "0.0.0.0:9116"
 snmp_exporter_log_level: info
 
