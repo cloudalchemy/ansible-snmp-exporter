@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
-
+## [0.3.0](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-05-12)
 **Merged pull requests:**
 
+- Add checksum verification [\#12](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/12) ([paulfantom](https://github.com/paulfantom))
 - upgrade to molecule 2.x [\#11](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/11) ([paulfantom](https://github.com/paulfantom))
 
 ## [0.2.5](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-04-05)
