@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.3.1](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-05-27)
+**Fixed bugs:**
+
+- fix architecture var parsing [\#13](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/13) ([paulfantom](https://github.com/paulfantom))
+
 ## [0.3.0](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-05-12)
 **Merged pull requests:**
 
