@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.4.0](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-07-01)
+**Merged pull requests:**
+
+- use tox, ansible 2.6, and allow using remote docker host [\#14](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/14) ([paulfantom](https://github.com/paulfantom))
+
 ## [0.3.1](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-05-27)
 **Fixed bugs:**
 
