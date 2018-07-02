@@ -23,6 +23,7 @@ galaxy_info:
   - prometheus
   - exporter
   - system
+  - network
   - metrics
 
 dependencies: []
