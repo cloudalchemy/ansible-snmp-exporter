@@ -80,7 +80,7 @@
   when: snmp_exporter_config_file != ""
 
 - name: Ensure SNMP Exporter is enabled on boot
-  service:
+  systemd:
+    daemon_reload: true
     name: snmp_exporter
     enabled: true
-    use: service
