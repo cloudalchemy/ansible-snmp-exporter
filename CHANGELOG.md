@@ -1,5 +1,6 @@
 # Change Log
 
+## [0.4.3](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-09-06)
 ## [0.4.2](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-08-16)
 **Merged pull requests:**
 
