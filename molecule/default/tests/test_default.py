@@ -9,7 +9,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 @pytest.mark.parametrize("files", [
     "/etc/systemd/system/snmp_exporter.service",
     "/usr/local/bin/snmp_exporter",
-    "/etc/snmp_exporter.yml"
+    "/etc/snmp_exporter/snmp.yml"
 ])
 def test_files(host, files):
     f = host.file(files)

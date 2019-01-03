@@ -28,3 +28,11 @@
     mode: 0755
   notify:
     - restart snmp exporter
+
+- name: Create configuration directory
+  file:
+    path: "/etc/snmp_exporter"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
