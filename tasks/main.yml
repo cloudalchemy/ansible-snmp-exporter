@@ -1,86 +1,26 @@
 ---
-- name: Create directory
-  file:
-    dest: /opt/snmp_exporter
-    state: directory
+- include: preflight.yml
+  tags:
+    - snmp_exporter_install
+    - snmp_exporter_configure
+    - snmp_exporter_run
 
-- name: "Get checksum for {{ go_arch_map[ansible_architecture] | default(ansible_architecture) }} architecture"
-  set_fact:
-    snmp_exporter_checksum: "{{ item.split(' ')[0] }}"
-  with_items:
-    - "{{ lookup('url', 'https://github.com/prometheus/snmp_exporter/releases/download/v' + snmp_exporter_version + '/sha256sums.txt', wantlist=True) | list }}"
-  when: "('linux-' + (go_arch_map[ansible_architecture] | default(ansible_architecture)) + '.tar.gz') in item"
+- include: install.yml
+  become: true
+  tags:
+    - snmp_exporter_install
 
-- name: Download snmp_exporter binary to local folder
-  become: false
-  get_url:
-    url: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}.tar.gz"
-    dest: "/tmp"
-    checksum: "sha256:{{ snmp_exporter_checksum }}"
-  register: _download_binary
-  until: _download_binary | success
-  retries: 5
-  delay: 2
-  delegate_to: localhost
-  check_mode: false
+- include: configure.yml
+  become: true
+  tags:
+    - snmp_exporter_configure
 
-- name: Unpack snmp_exporter binary
-  become: false
-  unarchive:
-    src: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}.tar.gz"
-    dest: "/tmp"
-    creates: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/snmp_exporter"
-  delegate_to: localhost
-  check_mode: false
-
-- name: Propagate SNMP Exporter binaries
-  copy:
-    src: "/tmp/snmp_exporter-{{ snmp_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/snmp_exporter"
-    dest: "/opt/snmp_exporter"
-    mode: 0755
-  notify:
-    - restart snmp exporter
-
-- name: Copy the SNMP Exporter systemd service file
-  template:
-    src: snmp_exporter.service.j2
-    dest: /etc/systemd/system/snmp_exporter.service
-    owner: root
-    group: root
-    mode: 0644
-  notify:
-    - restart snmp exporter
-
-- name: Download snmp configuration file from github repository
-  get_url:
-    url: "https://raw.githubusercontent.com/prometheus/snmp_exporter/v{{ snmp_exporter_version }}/snmp.yml"
-    dest: /opt/snmp_exporter/snmp.yml
-    validate_certs: false
-    owner: root
-    group: root
-    mode: 0644
-  register: _download_config
-  until: _download_config | success
-  retries: 5
-  delay: 2
-  notify:
-    - reload snmp exporter
-  when: not snmp_exporter_config_file
-
-- name: Copy configuration file
-  template:
-    src: "{{ snmp_exporter_config_file }}"
-    dest: /opt/snmp_exporter/snmp.yml
-    owner: root
-    group: root
-    mode: 0644
-  no_log: "{{ 'true' if __testing_on_travis is defined else 'false' }}"
-  notify:
-    - reload snmp exporter
-  when: snmp_exporter_config_file
-
-- name: Ensure SNMP Exporter is enabled on boot
+- name: ensure snmp_exporter service is started and enabled
+  become: true
   systemd:
     daemon_reload: true
     name: snmp_exporter
+    state: started
     enabled: true
+  tags:
+    - snmp_exporter_run
