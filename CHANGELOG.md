@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
-
+## [0.4.5](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-01-04)
 **Merged pull requests:**
 
+- use common directories for binary and config [\#20](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/20) ([paulfantom](https://github.com/paulfantom))
 - New snmp\_exporter upstream release! [\#19](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/19) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
 ## [0.4.4](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2018-10-08)
