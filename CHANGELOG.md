@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.4.6](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-01-13)
+**Merged pull requests:**
+
+- Fix defined test for config file. [\#21](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/21) ([SuperQ](https://github.com/SuperQ))
+
 ## [0.4.5](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-01-04)
 **Merged pull requests:**
 
