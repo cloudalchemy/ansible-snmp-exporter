@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
+
+**Merged pull requests:**
+
+- New snmp\_exporter upstream release! [\#22](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/22) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.4.6](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-01-13)
 **Merged pull requests:**
 
