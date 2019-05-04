@@ -1,7 +1,6 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
-
+## [0.4.7](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-05-04)
 **Merged pull requests:**
 
 - Synchronize files from cloudalchemy/skeleton [\#24](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/24) ([cloudalchemybot](https://github.com/cloudalchemybot))
