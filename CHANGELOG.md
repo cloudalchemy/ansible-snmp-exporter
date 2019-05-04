@@ -4,6 +4,8 @@
 
 **Merged pull requests:**
 
+- Synchronize files from cloudalchemy/skeleton [\#24](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/24) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- Wait for network to be online [\#23](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/23) ([paulfantom](https://github.com/paulfantom))
 - New snmp\_exporter upstream release! [\#22](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/22) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
 ## [0.4.6](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-01-13)
