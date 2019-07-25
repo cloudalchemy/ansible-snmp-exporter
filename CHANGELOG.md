@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
+
+**Merged pull requests:**
+
+- added restartsec and startlimitinterval configurations [\#26](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/26) ([oguzhaninan](https://github.com/oguzhaninan))
+
 ## [0.4.7](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-05-04)
 **Merged pull requests:**
 
