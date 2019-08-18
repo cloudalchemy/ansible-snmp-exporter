@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Synchronize files from cloudalchemy/skeleton [\#27](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/27) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - added restartsec and startlimitinterval configurations [\#26](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/26) ([oguzhaninan](https://github.com/oguzhaninan))
 
 ## [0.4.7](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-05-04)
