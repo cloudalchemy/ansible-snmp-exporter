@@ -14,8 +14,7 @@ Deploy and manage prometheus [SNMP exporter](https://github.com/prometheus/snmp_
 
 ## Requirements
 
-- Ansible >= 2.5 (It might work on previous versions, but we cannot guarantee it)
-- go-lang installed on deployer machine (same one where ansible is installed)
+- Ansible >= 2.6 (It might work on previous versions, but we cannot guarantee it)
 
 ## Role Variables
 
