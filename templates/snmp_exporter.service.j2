@@ -1,6 +1,7 @@
 [Unit]
 Description=Prometheus SNMP Exporter
-After=network.target
+After=network-online.target
+StartLimitInterval=0
 
 [Service]
 Type=simple
@@ -16,6 +17,7 @@ KillMode=process
 
 SyslogIdentifier=snmp_exporter
 Restart=always
+RestartSec=1
 
 [Install]
 WantedBy=multi-user.target
