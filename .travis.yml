@@ -1,6 +1,8 @@
 ---
 sudo: required
 language: python
+python:
+  - 3.x
 cache: pip
 services:
   - docker
@@ -11,7 +13,7 @@ env:
 matrix:
   fast_finish: true
 install:
-  - pip install tox-travis git-semver
+  - pip3 install tox-travis git-semver
 script:
   - tox
 deploy:
