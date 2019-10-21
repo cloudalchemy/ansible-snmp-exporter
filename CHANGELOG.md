@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] add support for CentOS8 [\#33](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/33) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Synchronize files from cloudalchemy/skeleton [\#32](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/32) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Synchronize files from cloudalchemy/skeleton [\#31](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/31) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Moving to python 3 and dropping support for python 2.x \(on deployer host\) [\#30](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/30) ([cloudalchemybot](https://github.com/cloudalchemybot))
