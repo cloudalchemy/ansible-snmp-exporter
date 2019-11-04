@@ -4,6 +4,12 @@
 
 **Merged pull requests:**
 
+- Fix another deprecated success filter [\#35](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/35) ([SuperQ](https://github.com/SuperQ))
+
+## [0.4.8](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-11-04)
+**Merged pull requests:**
+
+- Fix deprecated success filter [\#34](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/34) ([SuperQ](https://github.com/SuperQ))
 - \[REPO SYNC\] add support for CentOS8 [\#33](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/33) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Synchronize files from cloudalchemy/skeleton [\#32](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/32) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Synchronize files from cloudalchemy/skeleton [\#31](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/31) ([cloudalchemybot](https://github.com/cloudalchemybot))
