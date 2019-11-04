@@ -18,7 +18,7 @@
     group: root
     mode: 0644
   register: _download_config
-  until: _download_config | success
+  until: _download_config is success
   retries: 5
   delay: 2
   notify:
