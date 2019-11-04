@@ -1,7 +1,6 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
-
+## [0.4.9](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-11-04)
 **Merged pull requests:**
 
 - Fix another deprecated success filter [\#35](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/35) ([SuperQ](https://github.com/SuperQ))
