@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] add declarative label sync; add autolabelling PRs [\#39](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/39) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] molecule: use CI images from quay.io instead of dockerhub [\#37](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/37) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Update releaser.sh [\#36](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/36) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
