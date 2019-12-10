@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
-
+## [0.4.10](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-12-10)
 **Merged pull requests:**
 
+- New prometheus/snmp\_exporter upstream release! [\#40](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/40) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] add declarative label sync; add autolabelling PRs [\#39](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/39) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] molecule: use CI images from quay.io instead of dockerhub [\#37](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/37) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Update releaser.sh [\#36](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/36) ([cloudalchemybot](https://github.com/cloudalchemybot))
