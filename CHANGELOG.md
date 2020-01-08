@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] use latest available python [\#43](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/43) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] remove IRC link [\#41](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/41) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
 ## [0.4.10](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2019-12-10)
