@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] Merge pull request \#4 from cloudalchemy/travis\_fix [\#44](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/44) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] use latest available python [\#43](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/43) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] remove IRC link [\#41](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/41) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
