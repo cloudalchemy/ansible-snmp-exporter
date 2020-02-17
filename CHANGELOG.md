@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
-
+## [0.4.11](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2020-02-17)
 **Merged pull requests:**
 
+- New prometheus/snmp\_exporter upstream release! [\#45](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/45) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Merge pull request \#4 from cloudalchemy/travis\_fix [\#44](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/44) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] use latest available python [\#43](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/43) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] remove IRC link [\#41](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/41) ([cloudalchemybot](https://github.com/cloudalchemybot))
