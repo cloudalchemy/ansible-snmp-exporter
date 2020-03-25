@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
+
+**Merged pull requests:**
+
+- \[REPO SYNC\] lock molecule to v2 [\#46](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/46) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.4.11](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2020-02-17)
 **Merged pull requests:**
 
