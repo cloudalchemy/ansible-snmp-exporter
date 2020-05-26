@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
-
+## [0.4.12](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2020-05-26)
 **Merged pull requests:**
 
+- New prometheus/snmp\_exporter upstream release! [\#47](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/47) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] lock molecule to v2 [\#46](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/46) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
 ## [0.4.11](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2020-02-17)
