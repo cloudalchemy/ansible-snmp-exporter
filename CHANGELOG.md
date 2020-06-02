@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/snmp-exporter)
+
+**Merged pull requests:**
+
+- \[REPO SYNC\] Add passlib as a test requirement [\#48](https://github.com/cloudalchemy/ansible-snmp-exporter/pull/48) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.4.12](https://galaxy.ansible.com/cloudalchemy/snmp-exporter) (2020-05-26)
 **Merged pull requests:**
 
