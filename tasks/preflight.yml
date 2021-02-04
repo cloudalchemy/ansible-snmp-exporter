@@ -1,17 +1,19 @@
 ---
-- name: Get checksum lookup parameters
-  set_fact:
-    snmp_exporter_checksum_arch: "{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}"
-    snmp_exporter_checksum_url: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/sha256sums.txt"
+- block:
+    - name: Get checksum lookup parameters
+      set_fact:
+        snmp_exporter_checksum_arch: "{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}"
+        snmp_exporter_checksum_url: "https://github.com/prometheus/snmp_exporter/releases/download/v{{ snmp_exporter_version }}/sha256sums.txt"
 
-- name: "Get checksum for {{ snmp_exporter_checksum_arch }} architecture"
-  set_fact:
-    snmp_exporter_checksum: "{{ lookup('url', snmp_exporter_checksum_url, wantlist=True) | list | \
-                              select('contains', 'linux-' + snmp_exporter_checksum_arch + '.tar.gz') | list | first).split(' ')[0] }}"
-  ignore_errors: true
-  register: snmp_exporter_checksum_lookup
+    - name: "Get checksum for {{ snmp_exporter_checksum_arch }} architecture"
+      set_fact:
+        snmp_exporter_checksum: "{{ lookup('url', snmp_exporter_checksum_url, wantlist=True) | list | \
+                                  select('contains', 'linux-' + snmp_exporter_checksum_arch + '.tar.gz') | list | first).split(' ')[0] }}"
+      ignore_errors: true
+      register: snmp_exporter_checksum_lookup
 
-- name: Checksum lookup error message
-  fail:
-    msg: "Could not find a checksum for 'linux-{{ snmp_exporter_checksum_arch }}.tar.gz' in '{{ snmp_exporter_checksum_url }}'"
-  when: snmp_exporter_checksum_lookup.failed
+    - name: Checksum lookup error message
+      fail:
+        msg: "Could not find a checksum for 'linux-{{ snmp_exporter_checksum_arch }}.tar.gz' in '{{ snmp_exporter_checksum_url }}'"
+      when: snmp_exporter_checksum_lookup.failed
+  when: snmp_exporter_binary_local_dir | length == 0
