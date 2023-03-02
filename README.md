@@ -1,4 +1,6 @@
-<p><img src="https://www.circonus.com/wp-content/uploads/2015/03/sol-icon-itOps.png" alt="graph logo" title="graph" align="right" height="60" /></p>
+# DEPRECATED
+
+**This role has been deprecated in favor of a the [prometheus-community/ansible](https://github.com/prometheus-community/ansible) collection.**
 
 # Ansible Role: SNMP exporter
 
